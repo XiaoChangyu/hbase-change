@@ -47,9 +47,6 @@ public class TestSetHostnameIp {
 		ConnectionFactory.setHost("datanode2.bigdata", "192.168.1.23");
 		ConnectionFactory.setHost("datanode3.bigdata", "192.168.1.24");
 		ConnectionFactory.setHost("datanode4.bigdata", "192.168.1.25");
-//		ConnectionFactory.setHost("journalnode1.bigdata", "192.168.1.30");
-//		ConnectionFactory.setHost("journalnode2.bigdata", "192.168.1.31");
-//		ConnectionFactory.setHost("journalnode3.bigdata", "192.168.1.32");
 
 		Connection connection = ConnectionFactory.createConnection(conf);
 
