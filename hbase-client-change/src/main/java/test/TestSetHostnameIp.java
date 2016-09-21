@@ -34,22 +34,22 @@ public class TestSetHostnameIp {
 	public static void main(String[] args) throws Throwable {
 		Configuration conf = new Configuration();
 		conf.set("hbase.cluster.distributed", "true");
-		conf.set("hbase.zookeeper.quorum", "zookeeper1.bigdao,zookeeper2.bigdao,zookeeper3.bigdao");
+		conf.set("hbase.zookeeper.quorum", "zookeeper1.bigdata,zookeeper2.bigdata,zookeeper3.bigdata");
 		conf.set("hbase.master.info.port", "60010");
 		conf.set("hbase.zookeeper.property.clientPort", "2181");
 
-		ConnectionFactory.setHost("namenode1.bigdao", "172.16.134.71");
-		ConnectionFactory.setHost("namenode2.bigdao", "172.16.134.72");
-		ConnectionFactory.setHost("datanode1.bigdao", "172.16.134.81");
-		ConnectionFactory.setHost("datanode2.bigdao", "172.16.134.82");
-		ConnectionFactory.setHost("datanode3.bigdao", "172.16.134.83");
-		ConnectionFactory.setHost("datanode4.bigdao", "172.16.134.84");
-		ConnectionFactory.setHost("zookeeper1.bigdao", "172.16.134.73");
-		ConnectionFactory.setHost("zookeeper2.bigdao", "172.16.134.74");
-		ConnectionFactory.setHost("zookeeper3.bigdao", "172.16.134.75");
-		ConnectionFactory.setHost("journalnode1.bigdao", "172.16.134.76");
-		ConnectionFactory.setHost("journalnode2.bigdao", "172.16.134.77");
-		ConnectionFactory.setHost("journalnode3.bigdao", "172.16.134.78");
+		ConnectionFactory.setHost("zookeeper1.bigdata", "192.168.1.10");
+		ConnectionFactory.setHost("zookeeper2.bigdata", "192.168.1.11");
+		ConnectionFactory.setHost("zookeeper3.bigdata", "192.168.1.12");
+		ConnectionFactory.setHost("namenode1.bigdata", "192.168.1.20");
+		ConnectionFactory.setHost("namenode2.bigdata", "192.168.1.21");
+		ConnectionFactory.setHost("datanode1.bigdata", "192.168.1.22");
+		ConnectionFactory.setHost("datanode2.bigdata", "192.168.1.23");
+		ConnectionFactory.setHost("datanode3.bigdata", "192.168.1.24");
+		ConnectionFactory.setHost("datanode4.bigdata", "192.168.1.25");
+//		ConnectionFactory.setHost("journalnode1.bigdata", "192.168.1.30");
+//		ConnectionFactory.setHost("journalnode2.bigdata", "192.168.1.31");
+//		ConnectionFactory.setHost("journalnode3.bigdata", "192.168.1.32");
 
 		Connection connection = ConnectionFactory.createConnection(conf);
 
