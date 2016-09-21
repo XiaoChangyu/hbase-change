@@ -368,18 +368,18 @@
 			</snapshots>
 			<id>public</id>
 			<name>Public Repositories</name>
-			<url>http://172.16.1.205:8081/nexus/content/groups/public/</url>
+			<url>http://192.168.1.200:8081/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
 
 	<distributionManagement>
 		<repository>
 			<id>appserver-nexus</id>
-			<url>http://172.16.1.205:8081/nexus/content/repositories/releases/</url>
+			<url>http://192.168.1.200:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>appserver-nexus</id>
-			<url>http://172.16.1.205:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://192.168.1.200:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
