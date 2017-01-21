@@ -1,3 +1,14 @@
+突然意识到, 要做到程序运行时 Hostname-IP 映射根本不需要更改 hbase-client 代码.
+只需要做一个工具类, 更改 Java InetAddress 储存的映射关系即可.
+所以删掉了所有 hbase-client 相关的代码. 并且写了一个工具类, 在路径 src/main/java/p/ka/tools/HostnameIpMapping.java
+针对这个工具类的应用, 写了一个测试类, 在路径 src/test/java/p/ka/tools/TestHostnameIpMapping.java
+针对 HBase 客户端连接时的实际应用, 写了一个测试类, 在路径 src/test/java/test_hbase_client/TestHBaseSetHostnameIp.java
+
+至于如何使用, 可以将工具类复制到工具代码中, 也可以将工具包单独打包, 然后再用 maven 引入.
+
+
+--------- 以下是旧的那部分 ----------
+
 # hbase-change
 对 https://github.com/apache/hbase 的小改动. 目前只改了 hbase-client-1.1.2.
 
